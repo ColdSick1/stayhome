@@ -9,9 +9,9 @@
 
 part of 'router.dart';
 
-abstract class _$AppRouter extends RootStackRouter {
+abstract class _$AppRouterSingleton extends RootStackRouter {
   // ignore: unused_element
-  _$AppRouter({super.navigatorKey});
+  _$AppRouterSingleton({super.navigatorKey});
 
   @override
   final Map<String, PageFactory> pagesMap = {

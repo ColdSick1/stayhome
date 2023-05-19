@@ -1,11 +1,14 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:stayhome/main.dart';
 import 'package:stayhome/presentation/authorization/widgets/authorization_button.dart';
 import 'package:stayhome/presentation/authorization/widgets/authorization_text_field.dart';
 import 'package:stayhome/presentation/authorization/widgets/forgot_password.dart';
 import 'package:stayhome/presentation/authorization/widgets/authorization_logo.dart';
 import 'package:stayhome/presentation/authorization/widgets/second_button.dart';
 import 'package:stayhome/presentation/authorization/widgets/spacer_between_fields.dart';
+import 'package:stayhome/router/router.dart';
 
 @RoutePage()
 class AuthorizationScreen extends StatelessWidget {
@@ -22,15 +25,19 @@ class AuthorizationScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const AuthorizationLogo(),
-              SpacerBetweenFields(height: 40),
+              const SpacerBetweenFields(height: 40),
               const AuthorizationTextField(
                 hintText: 'Телефон',
-                iconAsset: '',
+                iconAsset: null,
               ),
               const SpacerBetweenFields(height: 50),
-              const AuthorizationTextField(
+              AuthorizationTextField(
                 hintText: 'Пароль',
-                iconAsset: 'assets/hide_password.svg',
+                iconAsset: SvgPicture.asset(
+                  'assets/hide_password.svg',
+                  colorFilter: ColorFilter.mode(Colors.grey, BlendMode.srcIn),
+                  fit: BoxFit.scaleDown,
+                ),
               ),
               const SpacerBetweenFields(height: 12),
               const Forgotpassword(),
@@ -42,7 +49,8 @@ class AuthorizationScreen extends StatelessWidget {
               SecondButton(
                 text: 'Регистрация',
                 pageNavigate: () {
-                  AutoRouter.of(context).pushNamed('/registration');
+                  getIt<AppRouterSingleton>().push(const RegistationRoute());
+                  // AutoRouter.of(context).pushNamed('/registration');
                 },
               ),
             ],

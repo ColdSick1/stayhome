@@ -1,27 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:stayhome/presentation/authorization/screeens/authorization_screen.dart';
+import 'package:get_it/get_it.dart';
 import 'package:stayhome/presentation/design/custom_theme_data.dart';
 import 'package:stayhome/router/router.dart';
 
+final getIt = GetIt.instance;
 void main() {
-  runApp(const MyApp());
+  getIt.registerSingleton<AppRouterSingleton>(
+    AppRouterSingleton.getInstance(),
+  );
+  // AppRouterSingleton appRouterInstance = AppRouterSingleton.getInstance();
+  runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+  // AppRouterSingleton appRouterInstance = AppRouterSingleton.getInstance();
+  MyApp({
+    super.key,
+  });
 
   @override
   State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
-  final _appRouter = AppRouter();
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
       theme: customThemeData,
-      routerConfig: _appRouter.config(),
+      routerConfig: getIt<AppRouterSingleton>().config(),
       // home: const AuthorizationScreen(),
     );
   }

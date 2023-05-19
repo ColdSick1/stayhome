@@ -6,7 +6,13 @@ import '../presentation/authorization/screeens/registration_screen.dart';
 part 'router.gr.dart';
 
 @AutoRouterConfig()
-class AppRouter extends _$AppRouter {
+class AppRouterSingleton extends _$AppRouterSingleton {
+  static AppRouterSingleton? _instance;
+  AppRouterSingleton._();
+  static AppRouterSingleton getInstance() {
+    return _instance ??= AppRouterSingleton._();
+  }
+
   @override
   List<AutoRoute> get routes => [
         AutoRoute(page: AuthorizationRoute.page, path: '/'),

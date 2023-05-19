@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:stayhome/presentation/design/colors.dart';
 
 class AuthorizationTextField extends StatelessWidget {
-  final String iconAsset;
+  // final String iconAsset;
   final String hintText;
+  final Widget? iconAsset;
 
   const AuthorizationTextField({
     super.key,
@@ -16,15 +15,17 @@ class AuthorizationTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
         decoration: InputDecoration(
-      suffixIcon: iconAsset != ''
-          ? SvgPicture.asset(
-              iconAsset,
-              colorFilter: ColorFilter.mode(Colors.grey, BlendMode.srcIn),
-              fit: BoxFit.scaleDown,
-            )
-          : null,
+      suffixIcon: iconAsset,
       hintText: hintText,
       hintStyle: Theme.of(context).textTheme.bodySmall,
     ));
   }
 }
+
+//  iconAsset != ''
+      //     ? SvgPicture.asset(
+      //         iconAsset,
+      //         colorFilter: ColorFilter.mode(Colors.grey, BlendMode.srcIn),
+      //         fit: BoxFit.scaleDown,
+      //       )
+      //     : null,
