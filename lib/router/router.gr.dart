@@ -27,6 +27,12 @@ abstract class _$AppRouterSingleton extends RootStackRouter {
         child: const RegistationScreen(),
       );
     },
+    ItemsRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ItemsScreen(),
+      );
+    },
   };
 }
 
@@ -54,6 +60,20 @@ class RegistationRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'RegistationRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ItemsScreen]
+class ItemsRoute extends PageRouteInfo<void> {
+  const ItemsRoute({List<PageRouteInfo>? children})
+      : super(
+          ItemsRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ItemsRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

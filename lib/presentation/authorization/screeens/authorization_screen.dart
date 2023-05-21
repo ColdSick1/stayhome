@@ -35,7 +35,8 @@ class AuthorizationScreen extends StatelessWidget {
                 hintText: 'Пароль',
                 iconAsset: SvgPicture.asset(
                   'assets/hide_password.svg',
-                  colorFilter: ColorFilter.mode(Colors.grey, BlendMode.srcIn),
+                  colorFilter:
+                      const ColorFilter.mode(Colors.grey, BlendMode.srcIn),
                   fit: BoxFit.scaleDown,
                 ),
               ),

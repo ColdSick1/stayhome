@@ -9,12 +9,12 @@ void main() {
     AppRouterSingleton.getInstance(),
   );
   // AppRouterSingleton appRouterInstance = AppRouterSingleton.getInstance();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
   // AppRouterSingleton appRouterInstance = AppRouterSingleton.getInstance();
-  MyApp({
+  const MyApp({
     super.key,
   });
 

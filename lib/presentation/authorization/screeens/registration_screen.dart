@@ -71,7 +71,8 @@ class RegistationScreen extends StatelessWidget {
               SecondButton(
                   text: 'Войти',
                   pageNavigate: () {
-                    getIt<AppRouterSingleton>().push(AuthorizationRoute());
+                    getIt<AppRouterSingleton>()
+                        .push(const AuthorizationRoute());
                   }),
             ],
           ),

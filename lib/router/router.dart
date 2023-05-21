@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 
 import '../presentation/authorization/screeens/authorization_screen.dart';
 import '../presentation/authorization/screeens/registration_screen.dart';
+import '../presentation/items/screens/items_screen.dart';
 
 part 'router.gr.dart';
 
@@ -15,7 +16,16 @@ class AppRouterSingleton extends _$AppRouterSingleton {
 
   @override
   List<AutoRoute> get routes => [
-        AutoRoute(page: AuthorizationRoute.page, path: '/'),
-        AutoRoute(page: RegistationRoute.page, path: '/registration')
+        AutoRoute(
+          page: AuthorizationRoute.page,
+          path: '/',
+        ),
+        AutoRoute(
+          page: RegistationRoute.page,
+          path: '/registration',
+        ),
+        AutoRoute(
+          page: ItemsRoute.page,
+        ),
       ];
 }

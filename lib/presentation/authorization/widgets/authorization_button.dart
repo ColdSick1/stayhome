@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:stayhome/presentation/design/colors.dart';
 
+import '../../../main.dart';
+import '../../../router/router.dart';
+
 class AuthorizationButton extends StatelessWidget {
   final String text;
   const AuthorizationButton({super.key, required this.text});
@@ -8,6 +11,9 @@ class AuthorizationButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: () {
+        getIt<AppRouterSingleton>().push(const ItemsRoute());
+      },
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(40),
