@@ -64,8 +64,12 @@ class RegistationScreen extends StatelessWidget {
                 ),
               ),
               const SpacerBetweenFields(height: 44),
-              const AuthorizationButton(
+              AuthorizationButton(
+                padding: 16.0,
                 text: 'Зарегистрироваться',
+                pageRoute: () {
+                  getIt<AppRouterSingleton>().push(const ItemsRoute());
+                },
               ),
               const SpacerBetweenFields(height: 23),
               SecondButton(

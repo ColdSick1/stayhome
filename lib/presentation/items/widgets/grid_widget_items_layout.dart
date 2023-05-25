@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:stayhome/model/items_model.dart';
 import 'package:stayhome/presentation/design/colors.dart';
+import 'package:stayhome/presentation/items/widgets/dialog_widget.dart';
 
 class GridWidgetLayout extends StatelessWidget {
   // final String name;
@@ -18,14 +19,19 @@ class GridWidgetLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return GestureDetector(
+      onTap: () {
+        showDialog(
+            context: context,
+            builder: (_) {
+              return CustomDialog();
+            });
+      },
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Container(
-            child: SvgPicture.asset(model.asset),
-          ),
+          SvgPicture.asset(model.asset),
           Text(
             model.name,
             style: Theme.of(context)

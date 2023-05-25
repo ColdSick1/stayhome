@@ -17,9 +17,6 @@ class GridWidgetItems extends StatelessWidget {
         childAspectRatio: 0.95,
         children: ItemsModelData.map(
           (e) => GridWidgetLayout(
-            // name: e.name,
-            // effect: e.effect,
-            // asset: e.asset,
             model: e,
           ),
         ).toList(),

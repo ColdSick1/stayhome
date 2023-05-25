@@ -43,8 +43,12 @@ class AuthorizationScreen extends StatelessWidget {
               const SpacerBetweenFields(height: 12),
               const Forgotpassword(),
               const SpacerBetweenFields(height: 28),
-              const AuthorizationButton(
+              AuthorizationButton(
+                padding: 16.0,
                 text: 'Войти',
+                pageRoute: () {
+                  getIt<AppRouterSingleton>().push(const ItemsRoute());
+                },
               ),
               const SpacerBetweenFields(height: 19),
               SecondButton(
