@@ -57,8 +57,8 @@ class CustomDialog extends StatelessWidget {
             ),
           ),
           Positioned(
-            child: Image.asset(Assets.assets_delivery_star_png),
             top: -100,
+            child: Image.asset(Assets.assets_delivery_star_png),
           ),
         ],
       ),

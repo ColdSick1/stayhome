@@ -33,6 +33,42 @@ abstract class _$AppRouterSingleton extends RootStackRouter {
         child: const ItemsScreen(),
       );
     },
+    DashboardRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const DashboardPage(),
+      );
+    },
+    ProgressRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ProgressScreen(),
+      );
+    },
+    MapRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const MapScreen(),
+      );
+    },
+    FriendsRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const FriendsScreen(),
+      );
+    },
+    Rate.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const RateScreen(),
+      );
+    },
+    FriendsRoutingScreen.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const FriendsRoutingWidget(),
+      );
+    },
   };
 }
 
@@ -74,6 +110,90 @@ class ItemsRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'ItemsRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [DashboardPage]
+class DashboardRoute extends PageRouteInfo<void> {
+  const DashboardRoute({List<PageRouteInfo>? children})
+      : super(
+          DashboardRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'DashboardRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ProgressScreen]
+class ProgressRoute extends PageRouteInfo<void> {
+  const ProgressRoute({List<PageRouteInfo>? children})
+      : super(
+          ProgressRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ProgressRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [MapScreen]
+class MapRoute extends PageRouteInfo<void> {
+  const MapRoute({List<PageRouteInfo>? children})
+      : super(
+          MapRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'MapRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [FriendsScreen]
+class FriendsRoute extends PageRouteInfo<void> {
+  const FriendsRoute({List<PageRouteInfo>? children})
+      : super(
+          FriendsRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'FriendsRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [RateScreen]
+class Rate extends PageRouteInfo<void> {
+  const Rate({List<PageRouteInfo>? children})
+      : super(
+          Rate.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Rate';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [FriendsRoutingWidget]
+class FriendsRoutingScreen extends PageRouteInfo<void> {
+  const FriendsRoutingScreen({List<PageRouteInfo>? children})
+      : super(
+          FriendsRoutingScreen.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'FriendsRoutingScreen';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

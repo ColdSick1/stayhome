@@ -24,7 +24,7 @@ class GridWidgetLayout extends StatelessWidget {
         showDialog(
             context: context,
             builder: (_) {
-              return CustomDialog();
+              return const CustomDialog();
             });
       },
       child: Column(

@@ -7,4 +7,5 @@ class DesignColors {
   static const normalTxt = Color(0xFF757F8C);
   static const hidePassword = Color(0xFFDBE3F0);
   static const grey = Color(0xFF757F8C);
+  static const allertRed = Color(0xFFEF5A04);
 }

@@ -7,20 +7,17 @@ class GridWidgetItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
-        top: 32,
-      ),
-      child: GridView.count(
-        crossAxisCount: 3,
-        mainAxisSpacing: 44,
-        childAspectRatio: 0.95,
-        children: ItemsModelData.map(
-          (e) => GridWidgetLayout(
-            model: e,
-          ),
-        ).toList(),
-      ),
+    return GridView.count(
+      shrinkWrap: true,
+      primary: false,
+      crossAxisCount: 3,
+      mainAxisSpacing: 44,
+      childAspectRatio: 0.95,
+      children: ItemsModelData.map(
+        (e) => GridWidgetLayout(
+          model: e,
+        ),
+      ).toList(),
     );
   }
 }

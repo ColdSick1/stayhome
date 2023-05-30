@@ -24,8 +24,20 @@ class ItemsScreen extends StatelessWidget {
               ),
         ),
       ),
-      body: const GridWidgetItems(),
-      endDrawer: StayHomeDrawer(),
+      body: SingleChildScrollView(
+          child: Column(
+        children: const [
+          SizedBox(
+            height: 30,
+          ),
+          GridWidgetItems(),
+          SizedBox(
+            height: 25,
+          )
+        ],
+      )),
+      // bottomNavigationBar: const CustomBottomNavigationBar(),
+      endDrawer: const StayHomeDrawer(),
     );
   }
 }

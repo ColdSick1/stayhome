@@ -68,7 +68,7 @@ class RegistationScreen extends StatelessWidget {
                 padding: 16.0,
                 text: 'Зарегистрироваться',
                 pageRoute: () {
-                  getIt<AppRouterSingleton>().push(const ItemsRoute());
+                  getIt<AppRouterSingleton>().push(const DashboardRoute());
                 },
               ),
               const SpacerBetweenFields(height: 23),
