@@ -43,7 +43,7 @@ class CustomDialog extends StatelessWidget {
                   AuthorizationButton(
                     padding: 8.0,
                     text: 'Получить',
-                    pageRoute: () {},
+                    tapHandler: () {},
                   ),
                   const SpacerBetweenFields(height: 23),
                   SecondButton(

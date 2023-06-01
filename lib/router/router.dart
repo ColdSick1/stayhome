@@ -8,7 +8,7 @@ import '../presentation/authorization/screeens/registration_screen.dart';
 
 import '../presentation/friends/screen/rate_screen.dart';
 import '../presentation/items/screens/items_screen.dart';
-import '../presentation/items/screens/progress_screen.dart';
+import '../presentation/progress/screens/progress_screen.dart';
 
 part 'router.gr.dart';
 

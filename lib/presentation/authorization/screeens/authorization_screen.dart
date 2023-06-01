@@ -46,7 +46,7 @@ class AuthorizationScreen extends StatelessWidget {
               AuthorizationButton(
                 padding: 16.0,
                 text: 'Войти',
-                pageRoute: () {
+                tapHandler: () {
                   getIt<AppRouterSingleton>().push(const DashboardRoute());
                 },
               ),

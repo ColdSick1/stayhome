@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:stayhome/presentation/design/colors.dart';
 
 import '../../../model/user_rating/user_rating_model.dart';
@@ -36,7 +34,7 @@ class UserRatingLayout extends StatelessWidget {
                     fontWeight: FontWeight.w400,
                   ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 16,
             ),
             Text(
@@ -60,7 +58,7 @@ class UserRatingLayout extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 16,
             )
           ],

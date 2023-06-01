@@ -18,7 +18,6 @@ class FriendsRoutingWidget extends StatelessWidget {
           Rate(),
         ],
         builder: (context, child, tabController) {
-          final tabsRouter = AutoTabsRouter.of(context);
           return Scaffold(
             backgroundColor: const Color(0xFFF6F6FF),
             appBar: AppBar(

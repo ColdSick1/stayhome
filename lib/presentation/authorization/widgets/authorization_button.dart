@@ -4,17 +4,17 @@ import 'package:stayhome/presentation/design/colors.dart';
 class AuthorizationButton extends StatelessWidget {
   final double padding;
   final String text;
-  final Function() pageRoute;
+  final Function() tapHandler;
   const AuthorizationButton(
       {super.key,
       required this.text,
-      required this.pageRoute,
+      required this.tapHandler,
       required this.padding});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: pageRoute,
+      onTap: tapHandler,
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(40),

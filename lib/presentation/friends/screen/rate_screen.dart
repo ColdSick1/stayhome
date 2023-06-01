@@ -9,10 +9,10 @@ class RateScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return const SingleChildScrollView(
       physics: BouncingScrollPhysics(),
       child: Column(
-        children: const [
+        children: [
           SizedBox(
             height: 30,
           ),
