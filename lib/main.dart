@@ -27,6 +27,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       theme: customThemeData,
+      debugShowCheckedModeBanner: false,
       routerConfig: getIt<AppRouterSingleton>().config(),
       // home: const AuthorizationScreen(),
     );

@@ -24,9 +24,9 @@ class ItemsScreen extends StatelessWidget {
               ),
         ),
       ),
-      body: SingleChildScrollView(
+      body:  SingleChildScrollView(
           child: Column(
-        children: const [
+        children: [
           SizedBox(
             height: 30,
           ),

@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:stayhome/presentation/FAQ/screen/faq_screen.dart';
 import 'package:stayhome/presentation/items/screens/dashboard.dart';
 import 'package:stayhome/presentation/friends/screen/friends_screen.dart';
 import 'package:stayhome/presentation/items/screens/map_screen.dart';
@@ -22,6 +23,10 @@ class AppRouterSingleton extends _$AppRouterSingleton {
 
   @override
   List<AutoRoute> get routes => [
+        AutoRoute(
+          page: FaqRoute.page,
+          path: '/faq',
+        ),
         AutoRoute(
           page: AuthorizationRoute.page,
           path: '/',

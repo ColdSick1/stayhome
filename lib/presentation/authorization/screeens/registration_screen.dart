@@ -67,7 +67,7 @@ class RegistationScreen extends StatelessWidget {
               AuthorizationButton(
                 padding: 16.0,
                 text: 'Зарегистрироваться',
-                pageRoute: () {
+                tapHandler: () {
                   getIt<AppRouterSingleton>().push(const DashboardRoute());
                 },
               ),

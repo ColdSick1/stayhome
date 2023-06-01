@@ -21,31 +21,40 @@ class StayHomeDrawer extends StatelessWidget {
                 children: [
                   Image.asset('assets/stay_home_drawer.png'),
                   const Divider(),
-                  const ListTileForDrawer(
+                  ListTileForDrawer(
                     asset: Assets.assets_bell_svg,
                     title: 'Уведомления',
                     trailing: '12',
+                    pageRoute: () {},
                   ),
                   const Divider(),
-                  const ListTileForDrawer(
+                  ListTileForDrawer(
+                    pageRoute: () {},
                     asset: Assets.assets_info_svg,
                     title: 'О приложении',
                     trailing: null,
                   ),
                   const Divider(),
-                  const ListTileForDrawer(
+                  ListTileForDrawer(
+                    pageRoute: () {
+                      getIt<AppRouterSingleton>().push(
+                        const FaqRoute(),
+                      );
+                    },
                     asset: Assets.assets_faq_svg,
                     title: 'FAQ',
                     trailing: null,
                   ),
                   const Divider(),
-                  const ListTileForDrawer(
+                  ListTileForDrawer(
+                    pageRoute: () {},
                     asset: Assets.assets_rating_svg,
                     title: 'Рейтинг',
                     trailing: null,
                   ),
                   const Divider(),
-                  const ListTileForDrawer(
+                  ListTileForDrawer(
+                    pageRoute: () {},
                     asset: Assets.assets_settings_svg,
                     title: 'Настройки',
                     trailing: null,
@@ -53,16 +62,14 @@ class StayHomeDrawer extends StatelessWidget {
                   const Divider(),
                 ],
               ),
-              GestureDetector(
-                onTap: () {
+              ListTileForDrawer(
+                pageRoute: () {
                   getIt<AppRouterSingleton>().pop();
                 },
-                child: const ListTileForDrawer(
-                  asset: Assets.assets_logout_svg,
-                  title: 'Выход',
-                  trailing: null,
-                ),
-              )
+                asset: Assets.assets_logout_svg,
+                title: 'Выход',
+                trailing: null,
+              ),
             ],
           ),
         ),

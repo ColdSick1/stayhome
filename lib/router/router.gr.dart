@@ -39,12 +39,6 @@ abstract class _$AppRouterSingleton extends RootStackRouter {
         child: const DashboardPage(),
       );
     },
-    ProgressRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const ProgressScreen(),
-      );
-    },
     MapRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -67,6 +61,18 @@ abstract class _$AppRouterSingleton extends RootStackRouter {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const FriendsRoutingWidget(),
+      );
+    },
+    FaqRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const FaqScreen(),
+      );
+    },
+    ProgressRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ProgressScreen(),
       );
     },
   };
@@ -129,20 +135,6 @@ class DashboardRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [ProgressScreen]
-class ProgressRoute extends PageRouteInfo<void> {
-  const ProgressRoute({List<PageRouteInfo>? children})
-      : super(
-          ProgressRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'ProgressRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
-}
-
-/// generated route for
 /// [MapScreen]
 class MapRoute extends PageRouteInfo<void> {
   const MapRoute({List<PageRouteInfo>? children})
@@ -194,6 +186,34 @@ class FriendsRoutingScreen extends PageRouteInfo<void> {
         );
 
   static const String name = 'FriendsRoutingScreen';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [FaqScreen]
+class FaqRoute extends PageRouteInfo<void> {
+  const FaqRoute({List<PageRouteInfo>? children})
+      : super(
+          FaqRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'FaqRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ProgressScreen]
+class ProgressRoute extends PageRouteInfo<void> {
+  const ProgressRoute({List<PageRouteInfo>? children})
+      : super(
+          ProgressRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ProgressRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

@@ -4,9 +4,6 @@ import 'package:stayhome/presentation/friends/widget/friends_activity_module.dar
 import 'package:stayhome/presentation/friends/widget/friends_module.dart';
 import 'package:stayhome/presentation/friends/widget/search_bar.dart';
 import 'package:stayhome/presentation/friends/widget/your_friends_activity.dart';
-import 'package:stayhome/presentation/items/screens/drawer.dart';
-
-import '../../design/colors.dart';
 
 @RoutePage()
 class FriendsScreen extends StatelessWidget {
@@ -39,7 +36,7 @@ class FriendsScreen extends StatelessWidget {
         // ),
         // endDrawer: const StayHomeDrawer(),
         SingleChildScrollView(
-      physics: BouncingScrollPhysics(),
+      physics: const BouncingScrollPhysics(),
       child: Column(
         // shrinkWrap: true,
         children: const [
