@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:stayhome/router/router.dart';
 
 import '../../design/colors.dart';
-import '../../items/screens/drawer.dart';
 
 @RoutePage(name: 'FriendsRoutingScreen')
 class FriendsRoutingWidget extends StatelessWidget {
@@ -21,6 +20,14 @@ class FriendsRoutingWidget extends StatelessWidget {
           return Scaffold(
             backgroundColor: const Color(0xFFF6F6FF),
             appBar: AppBar(
+              actions: [
+                IconButton(
+                  onPressed: Scaffold.of(context).openEndDrawer,
+                  icon: const Icon(
+                    Icons.reorder,
+                  ),
+                ),
+              ],
               backgroundColor: Colors.white,
               centerTitle: true,
               title: TabBar(
@@ -52,7 +59,6 @@ class FriendsRoutingWidget extends StatelessWidget {
                 color: DesignColors.grey,
               ),
             ),
-            endDrawer: const StayHomeDrawer(),
             body: child,
           );
         });

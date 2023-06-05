@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../design/colors.dart';
+
 class FaqContent extends StatefulWidget {
   final String title;
   final Widget child;
@@ -69,6 +71,11 @@ class _FaqContentState extends State<FaqContent>
           trailing: _buildIcon(context),
           title: Text(
             widget.title,
+            style: const TextStyle(
+              color: DesignColors.headerColor,
+              fontSize: 14,
+              fontWeight: FontWeight.w700,
+            ),
           ),
         ),
         ClipRect(

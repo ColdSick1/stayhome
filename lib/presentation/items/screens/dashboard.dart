@@ -19,9 +19,18 @@ class DashboardPage extends StatelessWidget {
         MapRoute(),
         ProgressRoute(),
       ],
-      builder: (context, child) {
+      builder: (
+        context,
+        child,
+      ) {
         final tabsRouter = AutoTabsRouter.of(context);
         return Scaffold(
+          // appBar: AppBar(
+          //   backgroundColor: Colors.white,
+          //   iconTheme: const IconThemeData(
+          //     color: DesignColors.grey,
+          //   ),
+          // ),
           endDrawer: const StayHomeDrawer(),
           backgroundColor: const Color(0xFFF6F6FF),
           body: child,
