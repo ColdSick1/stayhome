@@ -13,14 +13,14 @@ class ItemsScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFF6F6FF),
       appBar: AppBar(
-        actions: [
-          IconButton(
-            onPressed: Scaffold.of(context).openEndDrawer,
-            icon: const Icon(
-              Icons.reorder,
-            ),
-          ),
-        ],
+        // actions: [
+        //   IconButton(
+        //     onPressed: Scaffold.of(context).openEndDrawer,
+        //     icon: const Icon(
+        //       Icons.reorder,
+        //     ),
+        //   ),
+        // ],
         iconTheme: const IconThemeData(
           color: DesignColors.grey,
         ),
@@ -33,9 +33,9 @@ class ItemsScreen extends StatelessWidget {
               ),
         ),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Column(
-          children: const [
+          children: [
             SizedBox(
               height: 30,
             ),

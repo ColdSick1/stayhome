@@ -14,7 +14,7 @@ class DashboardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return AutoTabsRouter(
       routes: const [
-        ItemsRoute(),
+        MainRoute(),
         FriendsRoutingScreen(),
         MapRoute(),
         ProgressRoute(),

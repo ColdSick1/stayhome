@@ -27,25 +27,30 @@ class GridWidgetLayout extends StatelessWidget {
               return const CustomDialog();
             });
       },
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          SvgPicture.asset(model.asset),
-          Text(
-            model.name,
-            style: Theme.of(context)
-                .textTheme
-                .bodySmall!
-                .copyWith(fontSize: 14, color: DesignColors.headerColor),
-          ),
-          Text(
-            model.effect,
-            style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                  fontSize: 12,
-                ),
-          ),
-        ],
+      child: SizedBox(
+        height: 100,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SvgPicture.asset(model.asset),
+            Text(
+              model.name,
+              style: Theme.of(context)
+                  .textTheme
+                  .bodySmall!
+                  .copyWith(fontSize: 14, color: DesignColors.headerColor),
+            ),
+            Flexible(
+              child: Text(
+                model.effect,
+                style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                      fontSize: 12,
+                    ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

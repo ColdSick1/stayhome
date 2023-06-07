@@ -8,12 +8,11 @@ void main() {
   getIt.registerSingleton<AppRouterSingleton>(
     AppRouterSingleton.getInstance(),
   );
-  // AppRouterSingleton appRouterInstance = AppRouterSingleton.getInstance();
+
   runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  // AppRouterSingleton appRouterInstance = AppRouterSingleton.getInstance();
   const MyApp({
     super.key,
   });

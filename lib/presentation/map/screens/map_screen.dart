@@ -1,7 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:flutter_map_marker_cluster/flutter_map_marker_cluster.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:stayhome/assets.dart';
 import 'package:stayhome/presentation/map/location_service.dart';
@@ -40,33 +42,60 @@ class _MapScreenState extends State<MapScreen> {
           color: Colors.grey,
         ),
       ),
-      body: FlutterMap(
-        mapController: mapController,
-        options: MapOptions(
-          center: LatLng(55.7522200, 37.6155600),
-          zoom: 10,
-        ),
-        nonRotatedChildren: [
-          Align(
-            alignment: Alignment.bottomRight,
-            child: GestureDetector(
-              onTap: () {
-                final point = DeterminePoint();
-                if (point.result == null) return;
-
-                mapController.move(
-                    LatLng(point.result!.latitude, point.result!.longitude),
-                    10);
-              },
-              child: SvgPicture.asset(Assets.assets_FindLocation_svg),
+      body: FutureBuilder<Position?>(
+        future: DeterminePoint().determinePosition(),
+        builder: (context, snapshot) {
+          List<Marker> marker = [
+            Marker(
+              point: LatLng(snapshot.data!.latitude, snapshot.data!.longitude),
+              builder: (context) => SvgPicture.asset(
+                Assets.assets_me_svg,
+              ),
             ),
-          ),
-        ],
-        children: [
-          TileLayer(
-            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-          ),
-        ],
+          ];
+          if (snapshot.hasData) {
+            return FlutterMap(
+              mapController: mapController,
+              options: MapOptions(
+                center:
+                    LatLng(snapshot.data!.latitude, snapshot.data!.longitude),
+                zoom: 15,
+              ),
+              nonRotatedChildren: [
+                Align(
+                  alignment: Alignment.bottomRight,
+                  child: GestureDetector(
+                    onTap: () {
+                      mapController.move(
+                          LatLng(snapshot.data!.latitude,
+                              snapshot.data!.longitude),
+                          15);
+                    },
+                    child: SvgPicture.asset(Assets.assets_FindLocation_svg),
+                  ),
+                ),
+              ],
+              children: [
+                TileLayer(
+                  urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                ),
+                MarkerClusterLayerWidget(
+                  options: MarkerClusterLayerOptions(
+                    markers: marker,
+                    anchor: AnchorPos.align(AnchorAlign.center),
+                    builder: ((context, markers) {
+                      return SvgPicture.asset(Assets.assets_me_svg);
+                    }),
+                  ),
+                ),
+              ],
+            );
+          } else {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+        },
       ),
     );
   }

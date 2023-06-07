@@ -9,6 +9,7 @@ import '../presentation/authorization/screeens/registration_screen.dart';
 
 import '../presentation/friends/screen/rate_screen.dart';
 import '../presentation/items/screens/items_screen.dart';
+import '../presentation/main_screen/screen/main_screen.dart';
 import '../presentation/progress/screens/progress_screen.dart';
 
 part 'router.gr.dart';
@@ -41,10 +42,12 @@ class AppRouterSingleton extends _$AppRouterSingleton {
         AutoRoute(
           page: DashboardRoute.page,
           children: [
-            AutoRoute(
-              path: 'items',
-              page: ItemsRoute.page,
-            ),
+            AutoRoute(page: MainRoute.page, path: 'main', children: [
+              AutoRoute(page: ItemsRoute.page, path: 'items'),
+            ]
+                // path: 'items',
+                // page: ItemsRoute.page,
+                ),
             AutoRoute(
               path: 'friends',
               page: FriendsRoutingScreen.page,
