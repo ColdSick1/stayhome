@@ -45,15 +45,16 @@ class _MapScreenState extends State<MapScreen> {
       body: FutureBuilder<Position?>(
         future: DeterminePoint().determinePosition(),
         builder: (context, snapshot) {
-          List<Marker> marker = [
-            Marker(
-              point: LatLng(snapshot.data!.latitude, snapshot.data!.longitude),
-              builder: (context) => SvgPicture.asset(
-                Assets.assets_me_svg,
-              ),
-            ),
-          ];
           if (snapshot.hasData) {
+            List<Marker> marker = [
+              Marker(
+                point:
+                    LatLng(snapshot.data!.latitude, snapshot.data!.longitude),
+                builder: (context) => SvgPicture.asset(
+                  Assets.assets_me_svg,
+                ),
+              ),
+            ];
             return FlutterMap(
               mapController: mapController,
               options: MapOptions(

@@ -10,11 +10,10 @@ class UserHealthBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
     return Stack(
-      clipBehavior: Clip.antiAlias,
-      fit: StackFit.passthrough,
       children: [
         Container(
-          width: 360,
+          height: 25,
+          width: width * 0.91,
           decoration: BoxDecoration(
             border: Border.all(
               color: Colors.grey,
@@ -22,17 +21,17 @@ class UserHealthBar extends StatelessWidget {
             color: Colors.white,
             borderRadius: BorderRadius.circular(32),
           ),
-          child: Row(
-            children: [
-              Image.asset(
-                Assets.assets_health_png,
-              ),
-              Text(
-                '${percent * 100} %',
-                textAlign: TextAlign.center,
-              ),
-            ],
-          ),
+          // child: Row(
+          //   children: [
+          //     Image.asset(
+          //       Assets.assets_health_png,
+          //     ),
+          //     Text(
+          //       '${percent * 100} %',
+          //       textAlign: TextAlign.center,
+          //     ),
+          //   ],
+          // ),
         ),
         Container(
           height: 25,
@@ -47,10 +46,27 @@ class UserHealthBar extends StatelessWidget {
               ],
             ),
           ),
+          // child: Text(
+          //   '1',
+          //   style: TextStyle(color: Colors.white.withOpacity(0)),
+          //   textAlign: TextAlign.center,
+          // ),
+        ),
+        Positioned(
+          top: 3,
+          left: width * 0.43,
           child: Text(
-            '1',
-            style: TextStyle(color: Colors.white.withOpacity(0)),
-            textAlign: TextAlign.center,
+            '${(percent * 100).round()} %',
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+        ),
+        Positioned(
+          top: 1,
+          child: Image.asset(
+            Assets.assets_health_png,
           ),
         ),
       ],
