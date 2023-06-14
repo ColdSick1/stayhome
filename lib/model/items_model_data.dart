@@ -53,4 +53,154 @@ List<ItemsModel> ItemsModelData = [
     effect: '22 мин',
     asset: Assets.assets_invisability_svg,
   ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
+  ItemsModel(
+    name: 'Невидимость',
+    effect: '22 мин',
+    asset: Assets.assets_invisability_svg,
+  ),
 ];

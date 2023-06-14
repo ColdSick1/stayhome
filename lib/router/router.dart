@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:stayhome/presentation/FAQ/screen/faq_screen.dart';
 import 'package:stayhome/presentation/items/screens/dashboard.dart';
 import 'package:stayhome/presentation/friends/screen/friends_screen.dart';
+import 'package:stayhome/presentation/main_screen/screen/empty_main_screen.dart';
 import 'package:stayhome/presentation/map/screens/map_screen.dart';
 import '../presentation/friends/screen/friends_routing.dart';
 import '../presentation/authorization/screeens/authorization_screen.dart';
@@ -41,8 +42,10 @@ class AppRouterSingleton extends _$AppRouterSingleton {
         ),
         AutoRoute(
           page: DashboardRoute.page,
+          path: '/dashboard',
           children: [
-            AutoRoute(page: MainRoute.page, path: 'main', children: [
+            AutoRoute(page: EmptyMainRoute.page, path: '', children: [
+              AutoRoute(page: MainRoute.page, path: 'main'),
               AutoRoute(page: ItemsRoute.page, path: 'items'),
             ]
                 // path: 'items',

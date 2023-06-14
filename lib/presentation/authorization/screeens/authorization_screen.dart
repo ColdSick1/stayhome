@@ -54,7 +54,8 @@ class AuthorizationScreen extends StatelessWidget {
               SecondButton(
                 text: 'Регистрация',
                 pageNavigate: () {
-                  getIt<AppRouterSingleton>().push(const RegistationRoute());
+                  getIt<AppRouterSingleton>().pushNamed('/dashboard/progress');
+                  // getIt<AppRouterSingleton>().push(const RegistationRoute());
                   // AutoRouter.of(context).pushNamed('/registration');
                 },
               ),

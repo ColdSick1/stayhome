@@ -2,6 +2,8 @@ import 'dart:developer';
 import 'dart:math' as math;
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:stayhome/main.dart';
+import 'package:stayhome/router/router.dart';
 
 class PushNotificationService {
   initialize() async {
@@ -50,6 +52,8 @@ class PushNotificationService {
     FirebaseMessaging.onMessage.listen((message) {
       showNotification(message);
     });
+    AwesomeNotifications()
+        .setListeners(onActionReceivedMethod: _onActionReceivedMethod);
   }
 
   static showNotification(RemoteMessage message) {
@@ -59,7 +63,20 @@ class PushNotificationService {
         channelKey: 'Private Messages',
         title: message.data['title'].toString(),
         body: message.data['description'].toString(),
+        payload: {
+          'onTap': message.data['onTap'],
+        },
       ),
+    );
+  }
+
+  @pragma("vm:entry-point")
+  static Future<void> _onActionReceivedMethod(
+      ReceivedAction receivedAction) async {
+    log(receivedAction.payload?['onTap'] as String);
+
+    getIt<AppRouterSingleton>().pushNamed(
+      receivedAction.payload?['onTap'] as String,
     );
   }
 }

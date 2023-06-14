@@ -3,6 +3,9 @@ import 'package:stayhome/model/items_model_data.dart';
 import 'package:stayhome/presentation/design/colors.dart';
 import 'package:stayhome/presentation/items/widgets/grid_widget_items_layout.dart';
 
+import '../../../main.dart';
+import '../../../router/router.dart';
+
 class ItemList extends StatelessWidget {
   const ItemList({super.key});
 
@@ -28,7 +31,7 @@ class ItemList extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  // getIt<AppRouterSingleton>().;
+                  getIt<AppRouterSingleton>().push(const ItemsRoute());
                 },
                 child: const Text(
                   'Смотреть все >',

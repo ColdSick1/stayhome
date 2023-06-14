@@ -63,6 +63,12 @@ abstract class _$AppRouterSingleton extends RootStackRouter {
         child: const ItemsScreen(),
       );
     },
+    EmptyMainRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const EmptyMainPage(),
+      );
+    },
     MainRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -192,6 +198,20 @@ class ItemsRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'ItemsRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [EmptyMainPage]
+class EmptyMainRoute extends PageRouteInfo<void> {
+  const EmptyMainRoute({List<PageRouteInfo>? children})
+      : super(
+          EmptyMainRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'EmptyMainRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

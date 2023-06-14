@@ -5,16 +5,10 @@ import 'package:stayhome/presentation/design/colors.dart';
 import 'package:stayhome/presentation/items/widgets/dialog_widget.dart';
 
 class GridWidgetLayout extends StatelessWidget {
-  // final String name;
-  // final String effect;
-  // final String asset;
   final ItemsModel model;
   const GridWidgetLayout({
     super.key,
-    // required this.name,
-    // required this.effect,
     required this.model,
-    // required this.asset,
   });
 
   @override
