@@ -53,7 +53,6 @@ class _MyAppState extends State<MyApp> {
       theme: customThemeData,
       debugShowCheckedModeBanner: false,
       routerConfig: getIt<AppRouterSingleton>().config(),
-      // home: const AuthorizationScreen(),
     );
   }
 }

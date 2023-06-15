@@ -26,6 +26,16 @@ class PushNotificationService {
           importance: NotificationImportance.High,
           enableLights: true,
         ),
+        NotificationChannel(
+          channelKey: 'Group Messages',
+          channelName: 'Групповой чат',
+          channelDescription:
+              'Сообщения, отправленные пользователями из групповых чатов',
+          channelShowBadge: true,
+          enableVibration: true,
+          importance: NotificationImportance.High,
+          enableLights: true,
+        ),
       ],
     );
   }
@@ -60,7 +70,7 @@ class PushNotificationService {
     AwesomeNotifications().createNotification(
       content: NotificationContent(
         id: math.Random().nextInt(1000),
-        channelKey: 'Private Messages',
+        channelKey: message.data['channelKey'],
         title: message.data['title'].toString(),
         body: message.data['description'].toString(),
         payload: {

@@ -33,18 +33,10 @@ class ItemsScreen extends StatelessWidget {
               ),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: const [
-            SizedBox(
-              height: 30,
-            ),
-            GridWidgetItems(),
-            SizedBox(
-              height: 25,
-            )
-          ],
-        ),
+      body: Column(
+        children: const [
+          GridWidgetItems(),
+        ],
       ),
     );
     // endDrawer: const StayHomeDrawer(),
