@@ -6,12 +6,26 @@ import 'package:stayhome/model/items_model_data.dart';
 class ItemsPaginationCubit extends Cubit<ItemsPaginationState> {
   ItemsPaginationCubit() : super(ItemsPaginationInitial());
   List<ItemsModel> initialItems = [];
-  moveToScreen() async {
+  bool isError = true;
+  loadScreen() async {
+    await Future.delayed(const Duration(seconds: 1));
     emit(
       ItemsPaginationInitial(),
     );
-    await Future.delayed(const Duration(seconds: 2));
-    loadItems();
+    if (isError) {
+      emit(
+        ItemsPaginationError(),
+      );
+      isError = false;
+    }
+  }
+
+  loadAfterError() async {
+    if (!isError) {
+      emit(ItemsPaginationInitial());
+      await Future.delayed(const Duration(seconds: 2));
+      loadItems();
+    }
   }
 
   void loadItems() {
@@ -35,6 +49,8 @@ class ItemsPaginationLoaded extends ItemsPaginationState {
   final List<ItemsModel> items;
   ItemsPaginationLoaded(this.items);
 }
+
+class ItemsPaginationError extends ItemsPaginationState {}
 
 // class ItemsPaginationLoading extends ItemsPaginationState {
 //   final List<ItemsModel> oldItems;

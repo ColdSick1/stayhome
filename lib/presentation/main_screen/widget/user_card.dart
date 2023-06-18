@@ -33,8 +33,8 @@ class UserCard extends StatelessWidget {
               bottomRight: Radius.circular(24),
             ),
           ),
-          child: Column(
-            children: const [
+          child: const Column(
+            children: [
               CustomCircleAvatar(),
               SizedBox(
                 height: 16,

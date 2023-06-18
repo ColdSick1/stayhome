@@ -83,7 +83,7 @@ class FaqScreen extends StatelessWidget {
               SizedBox(
                 height: height / 3,
               ),
-              const VoidButton(text: 'Связаться с разработчиком')
+               VoidButton(text: 'Связаться с разработчиком')
             ],
           ),
         ),

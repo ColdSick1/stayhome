@@ -35,11 +35,11 @@ class FriendsScreen extends StatelessWidget {
         //   ),
         // ),
         // endDrawer: const StayHomeDrawer(),
-        SingleChildScrollView(
-      physics: const BouncingScrollPhysics(),
+        const SingleChildScrollView(
+      physics: BouncingScrollPhysics(),
       child: Column(
         // shrinkWrap: true,
-        children: const [
+        children: [
           CustomSearchBar(),
           SizedBox(
             height: 30,

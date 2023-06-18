@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:stayhome/presentation/design/colors.dart';
 
-class VoidButton extends StatelessWidget {
+class ReloadButton extends StatelessWidget {
   final String text;
-
-  const VoidButton({
-    super.key,
-    required this.text,
-  });
+  final Function() function;
+  const ReloadButton({super.key, required this.text, required this.function});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: function,
       child: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(40),
