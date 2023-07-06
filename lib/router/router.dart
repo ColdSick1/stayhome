@@ -4,6 +4,7 @@ import 'package:stayhome/presentation/items/screens/dashboard.dart';
 import 'package:stayhome/presentation/friends/screen/friends_screen.dart';
 import 'package:stayhome/presentation/main_screen/screen/empty_main_screen.dart';
 import 'package:stayhome/presentation/map/screens/map_screen.dart';
+import 'package:stayhome/router/route_guards.dart';
 import '../presentation/friends/screen/friends_routing.dart';
 import '../presentation/authorization/screeens/authorization_screen.dart';
 import '../presentation/authorization/screeens/registration_screen.dart';
@@ -12,6 +13,8 @@ import '../presentation/friends/screen/rate_screen.dart';
 import '../presentation/items/screens/items_screen.dart';
 import '../presentation/main_screen/screen/main_screen.dart';
 import '../presentation/progress/screens/progress_screen.dart';
+import '../presentation/settings/settings_screen.dart';
+import 'not_found_page.dart';
 
 part 'router.gr.dart';
 
@@ -26,14 +29,20 @@ class AppRouterSingleton extends _$AppRouterSingleton {
   @override
   List<AutoRoute> get routes => [
         AutoRoute(
+          page: Settings.page,
+          path: '/settings',
+        ),
+        AutoRoute(
           page: FaqRoute.page,
           path: '/faq',
         ),
+        AutoRoute(page: NotFound.page),
         AutoRoute(
           page: AuthorizationRoute.page,
           path: '/',
         ),
         AutoRoute(
+          guards: [CheckCorrectRoot()],
           page: RegistationRoute.page,
           path: '/registration',
         ),

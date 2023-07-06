@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../design/colors.dart';
+import 'package:stayhome/i18n/strings.g.dart';
 
 class Forgotpassword extends StatelessWidget {
   const Forgotpassword({super.key});
@@ -11,7 +12,7 @@ class Forgotpassword extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Text(
-          'Забыли пароль?',
+          t.forgetPassword,
           style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                 color: DesignColors.normalTxt,
                 fontSize: 14,

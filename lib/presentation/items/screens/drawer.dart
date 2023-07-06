@@ -54,7 +54,9 @@ class StayHomeDrawer extends StatelessWidget {
                   ),
                   const Divider(),
                   ListTileForDrawer(
-                    pageRoute: () {},
+                    pageRoute: () {
+                      getIt<AppRouterSingleton>().pushNamed('/settings');
+                    },
                     asset: Assets.assets_settings_svg,
                     title: 'Настройки',
                     trailing: null,

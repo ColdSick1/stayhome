@@ -51,12 +51,3 @@ class ItemsPaginationLoaded extends ItemsPaginationState {
 }
 
 class ItemsPaginationError extends ItemsPaginationState {}
-
-// class ItemsPaginationLoading extends ItemsPaginationState {
-//   final List<ItemsModel> oldItems;
-//   // final bool isFirstFetch;
-
-//   ItemsPaginationLoading(
-//     this.oldItems,
-//   );
-// }

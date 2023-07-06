@@ -9,6 +9,7 @@ import 'package:stayhome/presentation/authorization/widgets/authorization_logo.d
 import 'package:stayhome/presentation/authorization/widgets/second_button.dart';
 import 'package:stayhome/presentation/authorization/widgets/spacer_between_fields.dart';
 import 'package:stayhome/router/router.dart';
+import 'package:stayhome/i18n/strings.g.dart';
 
 @RoutePage()
 class AuthorizationScreen extends StatelessWidget {
@@ -26,13 +27,13 @@ class AuthorizationScreen extends StatelessWidget {
             children: [
               const AuthorizationLogo(),
               const SpacerBetweenFields(height: 40),
-              const AuthorizationTextField(
-                hintText: 'Телефон',
+              AuthorizationTextField(
+                hintText: t.phone,
                 iconAsset: null,
               ),
               const SpacerBetweenFields(height: 50),
               AuthorizationTextField(
-                hintText: 'Пароль',
+                hintText: t.password,
                 iconAsset: SvgPicture.asset(
                   'assets/hide_password.svg',
                   colorFilter:
@@ -45,17 +46,18 @@ class AuthorizationScreen extends StatelessWidget {
               const SpacerBetweenFields(height: 28),
               AuthorizationButton(
                 padding: 16.0,
-                text: 'Войти',
+                text: t.authorization,
                 tapHandler: () {
                   getIt<AppRouterSingleton>().push(const DashboardRoute());
+                  // getIt<AppRouterSingleton>().push(const NotFound());
                 },
               ),
               const SpacerBetweenFields(height: 19),
               SecondButton(
-                text: 'Регистрация',
+                text: t.registration,
                 pageNavigate: () {
-                  getIt<AppRouterSingleton>().pushNamed('/dashboard/progress');
-                  // getIt<AppRouterSingleton>().push(const RegistationRoute());
+                  // getIt<AppRouterSingleton>().pushNamed('/dashboard/progress');
+                  getIt<AppRouterSingleton>().push(const RegistationRoute());
                   // AutoRouter.of(context).pushNamed('/registration');
                 },
               ),

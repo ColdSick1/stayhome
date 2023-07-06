@@ -92,7 +92,12 @@ class ProgressScreen extends StatelessWidget {
                     const SizedBox(
                       height: 24,
                     ),
-                   VoidButton(text: 'Пригласить друзей',),
+                    const VoidButton(
+                      text: 'Пригласить друзей',
+                    ),
+                    const SizedBox(
+                      height: 40,
+                    ),
                   ],
                 ),
               ),

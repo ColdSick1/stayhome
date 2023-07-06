@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:stayhome/main.dart';
 import 'package:stayhome/presentation/design/colors.dart';
+import 'package:stayhome/router/router.dart';
 
 class VoidButton extends StatelessWidget {
   final String text;
@@ -12,7 +14,9 @@ class VoidButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        getIt<AppRouterSingleton>().push(const AuthorizationRoute());
+      },
       child: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(40),

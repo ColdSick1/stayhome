@@ -33,8 +33,8 @@ class ItemsScreen extends StatelessWidget {
               ),
         ),
       ),
-      body: const Column(
-        children: [
+      body: Column(
+        children: const [
           GridWidgetItems(),
         ],
       ),

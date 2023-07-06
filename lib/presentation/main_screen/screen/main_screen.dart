@@ -33,11 +33,11 @@ class MainScreen extends StatelessWidget {
         ),
         title: SvgPicture.asset(Assets.assets_Let_s_Chill_svg),
       ),
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+          children: const [
             UserCard(),
             SizedBox(
               height: 30,

@@ -87,6 +87,18 @@ abstract class _$AppRouterSingleton extends RootStackRouter {
         child: const ProgressScreen(),
       );
     },
+    Settings.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const SettingsScreen(),
+      );
+    },
+    NotFound.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const PageNotFound(),
+      );
+    },
   };
 }
 
@@ -254,6 +266,34 @@ class ProgressRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'ProgressRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [SettingsScreen]
+class Settings extends PageRouteInfo<void> {
+  const Settings({List<PageRouteInfo>? children})
+      : super(
+          Settings.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Settings';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [PageNotFound]
+class NotFound extends PageRouteInfo<void> {
+  const NotFound({List<PageRouteInfo>? children})
+      : super(
+          NotFound.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'NotFound';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
