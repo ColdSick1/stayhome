@@ -1,20 +1,20 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:stayhome/presentation/FAQ/screen/faq_screen.dart';
-import 'package:stayhome/presentation/items/screens/dashboard.dart';
-import 'package:stayhome/presentation/friends/screen/friends_screen.dart';
-import 'package:stayhome/presentation/main_screen/screen/empty_main_screen.dart';
-import 'package:stayhome/presentation/map/screens/map_screen.dart';
+import 'package:stayhome/presentation/screens/FAQ/screen/faq_screen.dart';
+import 'package:stayhome/presentation/screens/items/screens/dashboard.dart';
+import 'package:stayhome/presentation/screens/friends/screen/friends_tab.dart';
+import 'package:stayhome/presentation/screens/main_screen/screen/empty_main_screen.dart';
+import 'package:stayhome/presentation/screens/map/screens/map_screen.dart';
 import 'package:stayhome/router/route_guards.dart';
-import '../presentation/friends/screen/friends_routing.dart';
-import '../presentation/authorization/screeens/authorization_screen.dart';
-import '../presentation/authorization/screeens/registration_screen.dart';
+import '../presentation/screens/friends/screen/friends_screen.dart';
+import '../presentation/screens/authorization/screeens/authorization_screen.dart';
+import '../presentation/screens/authorization/screeens/registration_screen.dart';
 
-import '../presentation/friends/screen/rate_screen.dart';
-import '../presentation/items/screens/items_screen.dart';
-import '../presentation/main_screen/screen/main_screen.dart';
-import '../presentation/progress/screens/progress_screen.dart';
-import '../presentation/settings/settings_screen.dart';
-import 'not_found_page.dart';
+import '../presentation/screens/friends/screen/rate_tab.dart';
+import '../presentation/screens/items/screens/items_screen.dart';
+import '../presentation/screens/main_screen/screen/main_screen.dart';
+import '../presentation/screens/progress/screens/progress_screen.dart';
+import '../presentation/screens/settings/settings_screen.dart';
+import '../presentation/screens/not_found_page.dart';
 
 part 'router.gr.dart';
 

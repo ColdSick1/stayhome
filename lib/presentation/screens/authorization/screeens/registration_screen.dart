@@ -1,0 +1,87 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:stayhome/main.dart';
+import 'package:stayhome/presentation/screens/authorization/widgets/authorization_button.dart';
+import 'package:stayhome/presentation/screens/authorization/widgets/authorization_text_field.dart';
+import 'package:stayhome/presentation/screens/authorization/widgets/registration_logo.dart';
+import 'package:stayhome/presentation/screens/authorization/widgets/second_button.dart';
+import 'package:stayhome/presentation/screens/authorization/widgets/vertical_spacer.dart';
+import 'package:stayhome/presentation/design/colors.dart';
+import 'package:stayhome/router/router.dart';
+
+@RoutePage()
+class RegistationScreen extends StatelessWidget {
+  const RegistationScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.only(left: 24, right: 24, bottom: 30),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              const RegistrationLogo(),
+              const AuthorizationTextField(
+                hintText: 'Имя',
+                iconAsset: null,
+              ),
+              const VerticalSpacer(height: 44),
+              AuthorizationTextField(
+                hintText: 'Пол',
+                iconAsset: SvgPicture.asset(
+                  'assets/show_more.svg',
+                  colorFilter:
+                      const ColorFilter.mode(Colors.grey, BlendMode.srcIn),
+                  fit: BoxFit.scaleDown,
+                ),
+              ),
+              const VerticalSpacer(height: 44),
+              const AuthorizationTextField(
+                hintText: 'телефон',
+                iconAsset: null,
+              ),
+              const VerticalSpacer(height: 44),
+              AuthorizationTextField(
+                hintText: 'Пароль',
+                iconAsset: SvgPicture.asset(
+                  'assets/hide_password.svg',
+                  colorFilter:
+                      const ColorFilter.mode(Colors.grey, BlendMode.srcIn),
+                  fit: BoxFit.scaleDown,
+                ),
+              ),
+              const VerticalSpacer(height: 44),
+              AuthorizationTextField(
+                hintText: 'Повторите пароль',
+                iconAsset: SvgPicture.asset(
+                  'assets/show_password.svg',
+                  colorFilter: const ColorFilter.mode(
+                      DesignColors.grey, BlendMode.srcIn),
+                  fit: BoxFit.scaleDown,
+                ),
+              ),
+              const VerticalSpacer(height: 44),
+              AuthorizationButton(
+                padding: 16.0,
+                text: 'Зарегистрироваться',
+                tapHandler: () {
+                  getIt<AppRouterSingleton>().push(const DashboardRoute());
+                },
+              ),
+              const VerticalSpacer(height: 23),
+              SecondButton(
+                  text: 'Войти',
+                  pageNavigate: () {
+                    getIt<AppRouterSingleton>()
+                        .push(const AuthorizationRoute());
+                  }),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

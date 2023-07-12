@@ -36,19 +36,19 @@ abstract class _$AppRouterSingleton extends RootStackRouter {
     FriendsRoutingScreen.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const FriendsRoutingWidget(),
+        child: const FriendsScreen(),
       );
     },
     FriendsRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const FriendsScreen(),
+        child: const FriendsTab(),
       );
     },
     Rate.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const RateScreen(),
+        child: const RateTab(),
       );
     },
     DashboardRoute.name: (routeData) {
@@ -145,7 +145,7 @@ class FaqRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [FriendsRoutingWidget]
+/// [FriendsScreen]
 class FriendsRoutingScreen extends PageRouteInfo<void> {
   const FriendsRoutingScreen({List<PageRouteInfo>? children})
       : super(
@@ -159,7 +159,7 @@ class FriendsRoutingScreen extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [FriendsScreen]
+/// [FriendsTab]
 class FriendsRoute extends PageRouteInfo<void> {
   const FriendsRoute({List<PageRouteInfo>? children})
       : super(
@@ -173,7 +173,7 @@ class FriendsRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [RateScreen]
+/// [RateTab]
 class Rate extends PageRouteInfo<void> {
   const Rate({List<PageRouteInfo>? children})
       : super(
