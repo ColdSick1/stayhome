@@ -67,7 +67,7 @@ class AppRouterSingleton extends _$AppRouterSingleton {
                 AutoRoute(
                   page: FriendsRoute.page,
                 ),
-                AutoRoute(page: Rate.page),
+                AutoRoute(page: Rate.page, path: 'rating'),
               ],
             ),
             AutoRoute(
